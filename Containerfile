@@ -11,8 +11,6 @@ RUN apk update && \
     grep -v '^#' /extra-packages | xargs apk add
 RUN rm /extra-packages
 
-RUN echo /usr/bin/zsh >> /etc/shells
-
 RUN ln -fs /bin/sh /usr/bin/sh && \
     ln -fs /usr/bin/distrobox-host-exec /usr/bin/podman && \
     ln -fs /usr/bin/distrobox-host-exec /usr/bin/flatpak && \
