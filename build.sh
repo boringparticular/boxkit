@@ -20,6 +20,7 @@ buildah run "$ctr" -- sh -c 'apk update && \
 buildah run "$ctr" -- rm /extra-packages
 
 buildah run "$ctr" -- sh -c 'ln -fs /bin/sh /usr/bin/sh && \
+    ln -fs /bin/zsh /usr/bin/zsh && \
     ln -fs /usr/bin/distrobox-host-exec /usr/bin/podman && \
     ln -fs /usr/bin/distrobox-host-exec /usr/bin/flatpak && \
     ln -fs /usr/bin/distrobox-host-exec /usr/bin/rpm-ostree'
