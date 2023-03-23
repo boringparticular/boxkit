@@ -1,3 +1,6 @@
+alias b := build
+alias p := push
+
 default: build push
 
 build:
